@@ -15,8 +15,36 @@ The 5beamMethods_Document.pdf file contains a detailed explanation of each of th
 
 The following working directory is recomended to use this scripts:
 
-5Beam-Turbulence-Methods
-------------------------BinDataSignature
+  5Beam-Turbulence-Methods/
+		README.md
+    5BeamMethods_Document.pdf
+    Guerra_Thomson_FiveBeamMethods_Submitted_2016.pdf
+    RS_5beam.m
+    RS_VT.m
+    Signature_E_P_Profile_Plots.m
+    Signature_Production_5beam.m
+    Signature_QC.m
+    Signature_RawData_ENU.m
+    Signature_Reynolds_Stress_5Beam.m
+    Signature_Spectra_DissipationRate.m
+    Signature_Spectra_Plots.m
+    Signature_Spectra_w.m
+    Signature_StructureFunction_Plots.m
+    Signature_StructureFunction_dissipation.m
+    Signature_Usigned.m
+    Signature_join_files.m
+    dissipationMG_SF.m
+    sign_speed.m
+    signatureAD2CP_beam2xyz_enu.m
+    spectralestimate.m
+    structureFunction.m
+		BinDataSignature/ 
+    RawData/ %put raw data from MIDAS software here
+    SDF_Signtaure/
+    Signature_Dissipation/
+    Signature_Production/
+
+
 
 This work has been submitted for publication to the Journal of Atmospheric and Oceanic Technology on July 28 2016 as Guerra, M. and Thomson, J. "Turbulence measurements from 5-beam acoustic Doppler profilers".
 
