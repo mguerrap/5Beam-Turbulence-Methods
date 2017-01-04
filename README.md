@@ -15,8 +15,8 @@ The 5beamMethods_Document.pdf file contains a detailed explanation of each of th
 
 The following working directory is recomended to use this scripts:
 
-  5Beam-Turbulence-Methods/
-		README.md
+5Beam-Turbulence-Methods/
+    README.md
     5BeamMethods_Document.pdf
     Guerra_Thomson_FiveBeamMethods_Submitted_2016.pdf
     RS_5beam.m
