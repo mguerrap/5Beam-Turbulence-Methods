@@ -17,7 +17,7 @@ The following working directory is recomended to use this scripts:
 
     5Beam-Turbulence-Methods/
     	README.md
-	5BeamMethods_Document.pdf
+    	5BeamMethods_Document.pdf
     	Guerra_Thomson_FiveBeamMethods_Submitted_2016.pdf
     	RS_5beam.m
     	RS_VT.m
@@ -38,7 +38,7 @@ The following working directory is recomended to use this scripts:
     	signatureAD2CP_beam2xyz_enu.m
     	spectralestimate.m
     	structureFunction.m
-	BinDataSignature/ 
+    	BinDataSignature/ 
     	RawData/ %put raw data from MIDAS software here
     	SDF_Signtaure/
     	Signature_Dissipation/
