@@ -109,7 +109,7 @@ uw_simp_t=uw_simp*cos(phi1)+vw*sin(phi1);
 
 
 % TKE and Anisotropy
-q2=2/(4*sin(th)^2)*(b1_av+b2_av+b3_av+b4_av-2*(2*cos(th)^2-sin(th)^2)*b5_av...
+q2=1/(4*sin(th)^2)*(b1_av+b2_av+b3_av+b4_av-2*(2*cos(th)^2-sin(th)^2)*b5_av...
     -(cot(th)-1)*phi3*(b2_av-b1_av));
 
 F_phi=cot(th)*phi2*(b4_av-b3_av)+(1-2*csc(2*th))*phi3*(b2_av-b1_av);
