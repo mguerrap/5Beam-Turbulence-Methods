@@ -11,8 +11,8 @@ function [u2t v2t w2t uwt vwt uvt alpha q2]=RS_5beam(b1,b2,b3,b4,b5,th,phi1,phi2
 % phi2=Pitch
 % phi3=Roll
 % theta=beam angle
-% u=east velocity
-% v=north velovity
+% u=u_x (instrument coordinates)
+% v=v_y (instrument coordinates)
 % u and v are used to estimate u'v'
 % [Nz Nt]=[N Bins, Length Time]
 % Lenth in Time must correspond to time for average
