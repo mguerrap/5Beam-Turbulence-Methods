@@ -1,5 +1,9 @@
 function [u2t v2t w2t uwt vwt uvt alpha q2]=RS_5beam(b1,b2,b3,b4,b5,th,phi1,phi2,phi3,u,v)
 
+% -----------------------
+% Modified May 25th 2017
+% Sign of pitch and roll for the Signature/Sentinel in description bellow
+% ------------------------
 % Modified Jan 3rd 2017
 % Reynolds Stress for a 5 beam ADCP for small angel approx for Pitch and
 % Roll
@@ -19,6 +23,8 @@ function [u2t v2t w2t uwt vwt uvt alpha q2]=RS_5beam(b1,b2,b3,b4,b5,th,phi1,phi2
 % Give burst matrix (5 or 10 minutes for the Signature)
 % All angles in degrees
 
+
+% New May 25th 2017
 % For the Nortek Signature 1000
 % Dewey/Nortek
 % b1=b1
@@ -27,8 +33,23 @@ function [u2t v2t w2t uwt vwt uvt alpha q2]=RS_5beam(b1,b2,b3,b4,b5,th,phi1,phi2
 % b4=b2
 % b5=b5
 % phi1=Heading
-% phi2=-Roll
-% phi3=+Pitch
+% phi2=Roll
+% phi3=-Pitch
+
+
+% New May 25th 2017
+% For the RDI Sentinel
+% Dewey/Sentinel
+% b1=b1
+% b2=b2
+% b3=b3
+% b4=b4
+% b5=b5
+% phi1=Heading
+% phi2=+Pitch
+% phi3=+Roll
+
+
 % theta=beam angle, 25º
 % Call function like this:
 % RS_5beam(b1,b3,b4,b2,b5,25,Heading,-Roll,Pitch,u_east,v_north)

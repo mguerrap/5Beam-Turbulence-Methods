@@ -3,6 +3,11 @@
 % Uses RS_5beam.m to estimate the RS
 % RS are in Earth coordinates using instrument heading
 
+% -------------
+% Modified on May 25th 2017
+% Pitch and roll input signs to RS calculation to match Dewey & Stringer (2007) 
+% Figure 2 and equations 14 to 17.
+% -------------
 clc
 clear
 close all
@@ -103,7 +108,7 @@ for fi=1:Nens
     % 2007, we need to be consistent with the beams and the tilt angles:
     
     [uu(:,fi) vv(:,fi) ww(:,fi) uw(:,fi) vw(:,fi) uv(:,fi) anisotropy(:,fi) q2(:,fi)]=...
-        RS_5beam(b1,b3,b4,b2,b5,theta,h,-r,p,u,v);
+        RS_5beam(b1,b3,b4,b2,b5,theta,h,r,-p,u,v);
      
     %pause
     fi
