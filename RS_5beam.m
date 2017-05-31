@@ -1,6 +1,12 @@
 function [u2t v2t w2t uwt vwt uvt alpha q2]=RS_5beam(b1,b2,b3,b4,b5,th,phi1,phi2,phi3,u,v)
 
 % -----------------------
+% Modified May 31th 2017
+% angle in second term of RHS u'w' 
+% angle in third term of RHD u'v'
+% ------------------------
+
+% -----------------------
 % Modified May 25th 2017
 % Sign of pitch and roll for the Signature/Sentinel in description bellow
 % ------------------------
@@ -108,7 +114,7 @@ w2=-1/(4*(sin(th))^6*(cos(th))^2)*(-2*(sin(th))^5*cos(th)*phi3*(b2_av-b1_av)...
 
 %% u'w'
 uw=-1/(4*(sin(th))^6*(cos(th))^2)*((sin(th))^5*cos(th)*(b2_av-b1_av)...
-    +2*(sin(th))^4*(cos(th))^2*phi2*(b2_av+b1_av)-4*(sin(th))^4*(cos(th))^2*phi3*b5_av...
+    +2*(sin(th))^4*(cos(th))^2*phi3*(b2_av+b1_av)-4*(sin(th))^4*(cos(th))^2*phi3*b5_av...
     -4*(sin(th))^6*(cos(th))^2*phi2*uv_av);
 
 uw_simp=-1/(2*sin(2*th))*(b2_av-b1_av)+phi3/(sin(th))^2*(1/2*(b2_av+b1_av)-b5_av)-phi2*uv_av;
@@ -116,7 +122,7 @@ uw_simp=-1/(2*sin(2*th))*(b2_av-b1_av)+phi3/(sin(th))^2*(1/2*(b2_av+b1_av)-b5_av
 
 %% v'w'
 vw=-1/(4*(sin(th))^6*(cos(th))^2)*((sin(th))^5*cos(th)*(b4_av-b3_av)...
-    -2*(sin(th))^4*(cos(th))^2*phi2*(b4_av+b3_av)+4*(sin(th))^4*(cos(th))^2*phi3*b5_av...
+    -2*(sin(th))^4*(cos(th))^2*phi2*(b4_av+b3_av)+4*(sin(th))^4*(cos(th))^2*phi2*b5_av...
     +4*(sin(th))^6*(cos(th))^2*phi3*uv_av);
 
 %% Convert to Earth Coordinates using heading
