@@ -2,6 +2,7 @@
 
 A set of codes to process turbulence data from a 5-beam Accoustic Doppler Current Profiler (specifically the Nortek Signature 1000 AD2CP).
 
+This work is published on the Journal of Atmospheric and Oceanic Technology as Guerra, M. and Thomson, J. "Turbulence measurements from 5-beam acoustic Doppler profilers", and is available for open access at https://doi.org/10.1175/JTECH-D-16-0148.1 
 
 The following turbulence parameters can be estimated using this scripts and functions:
 
@@ -45,6 +46,6 @@ The following working directory is recomended to use this scripts:
     	Signature_Production/
 
 
-This work is published on the Journal of Atmospheric and Oceanic Technology as Guerra, M. and Thomson, J. "Turbulence measurements from 5-beam acoustic Doppler profilers", and is available for open access at https://doi.org/10.1175/JTECH-D-16-0148.1 
+
 
 For any comments and suggestions please contact me at mguerrap@uw.edu
