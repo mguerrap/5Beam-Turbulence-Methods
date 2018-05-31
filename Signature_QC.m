@@ -5,6 +5,8 @@ clear all
 close all
 
 % Define Min correlation and min amplitude
+% Choose thresholds according to your data-set 
+% Nortek recommends using 50% of the maximum correlation of your data
 
 mincor=50;
 minamp=30;

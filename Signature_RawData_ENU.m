@@ -7,6 +7,11 @@
 % Repeat for all MIDAS files
 % Plots raw data
 
+% May 30 2018 Note:
+% Check if you have the new format
+% ENU transformation might not work, because some variables from Data and
+% Config structures are not available anymore
+
 
 clear all, close all, clc
 
@@ -21,34 +26,34 @@ savepath = ['/Users/Maru/Documents/PhD_UW/5BeamCodes/RawData']; %Sequential name
 
 %% Raw Data
 load([ fpath '/' fname ])
-figure(1), clf
-
-for i = 1:4,
-    
-    ax(i) = subplot(5,1,i); 
-    set(gca,'FontSize',16)
-    pcolor(Data.Burst_MatlabTimeStamp-datenum(2015,0,0), double(Data.Burst_Range), double(eval(['Data.Burst_VelBeam' num2str(i)]))' ), 
-    shading flat, 
-    datetick
-    set(gca,'YDir','reverse')
-    ylabel(['Vel Beam ' num2str(i)])
-    caxis([-2 2])
-    colorbar,
-   
-    
-end
-
-ax(5) = subplot(5,1,5);
- set(gca,'FontSize',16)
-pcolor(Data.IBurst_MatlabTimeStamp-datenum(2015,0,0), double(Data.IBurst_Range), double(Data.IBurst_VelBeam5)' ), 
-    shading flat, 
-    datetick
-    set(gca,'YDir','reverse')
-    ylabel(['Vel Beam 5'])
-    caxis([-2 2])
-    colorbar,
-
-linkaxes(ax,'x')
+% figure(1), clf
+% 
+% for i = 1:4,
+%     
+%     ax(i) = subplot(5,1,i); 
+%     set(gca,'FontSize',16)
+%     pcolor(Data.Burst_MatlabTimeStamp-datenum(2015,0,0), double(Data.Burst_Range), double(eval(['Data.Burst_VelBeam' num2str(i)]))' ), 
+%     shading flat, 
+%     datetick
+%     set(gca,'YDir','reverse')
+%     ylabel(['Vel Beam ' num2str(i)])
+%     caxis([-2 2])
+%     colorbar,
+%    
+%     
+% end
+% 
+% ax(5) = subplot(5,1,5);
+%  set(gca,'FontSize',16)
+% pcolor(Data.IBurst_MatlabTimeStamp-datenum(2015,0,0), double(Data.IBurst_Range), double(Data.IBurst_VelBeam5)' ), 
+%     shading flat, 
+%     datetick
+%     set(gca,'YDir','reverse')
+%     ylabel(['Vel Beam 5'])
+%     caxis([-2 2])
+%     colorbar,
+% 
+% linkaxes(ax,'x')
 
 
 %% Convert to ENU coordinates

@@ -1,4 +1,6 @@
-% Modified due to modification i  Config struct 
+% Function provided by Nortek
+
+% Modified due to modification in  Config struct 
 % Line AD2CP_ was removed
 % MGP, April 29th, 2015
 
