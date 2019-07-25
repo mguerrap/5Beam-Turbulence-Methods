@@ -7,7 +7,7 @@ This work is published on the Journal of Atmospheric and Oceanic Technology as G
 The following turbulence parameters can be estimated using this scripts and functions:
 
 1. Turbulent kinetic energy dissipation rate from TKE frequency spectra and structure function
-2. Reynolds stressses using all 5 beam information and tilt corrections 
+2. Reynolds stresses using all 5 beam information and tilt corrections 
 3. Turbulent kinetic energy vertical shear production 
 
 Plotting functions are also included.
@@ -45,7 +45,6 @@ The following working directory is recomended to use this scripts:
     	Signature_Dissipation/
     	Signature_Production/
 
+Please use these codes carefully and check if functions and processing steps are suitable for your data.
 
-
-
-For any comments and suggestions please contact me at mguerrap@uw.edu
+For any questions, comments and suggestions please contact me at mguerrap@uw.edu or at mguerra@dal.ca
