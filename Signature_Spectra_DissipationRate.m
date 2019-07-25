@@ -46,6 +46,8 @@ for bin=1:Nbin
     % Using WOSA 2, can change to other spectral estimates for comparison
     % Define here which spectra estimate will use
     f=SigSDF.fks2(:,10);
+    
+    % Remove spectra noise before computing dissipation
     Sww=SigSDF.DSP_W2-repmat(SigSDF.noises(:,nnoise)',length(f),1); %WOSA2 Ns=400
     
     Ubar=SigSDF.uH_mean; %Mean horizontal velocity
