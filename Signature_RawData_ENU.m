@@ -12,6 +12,31 @@
 % ENU transformation might not work, because some variables from Data and
 % Config structures are not available anymore
 
+% Juluy 2019
+% Info missing on Config is related to beam angles:
+%     Config.BeamCfg1_theta=25;
+%     Config.BeamCfg2_theta=25;
+%     Config.BeamCfg3_theta=25;
+%     Config.BeamCfg4_theta=25;
+%
+%
+%     Config.BeamCfg1_phi=0;
+%     Config.BeamCfg2_phi=-90;
+%     Config.BeamCfg3_phi=180;
+%     Config.BeamCfg4_phi=90;
+%
+%     Config.BeamCfg5_theta=0;
+%     Config.BeamCfg5_phi=0;
+
+% If you use Deployment software to create .mat files, ENU velocities might
+% already be available, thus there is no need to convert them.
+
+% Alternatively, you can create your own Beam to ENU script, using the
+% rotation matrix information on .mat files.
+
+% Note this ENU transformation does not include magnetic declination
+% Hence, ENU velocities are with respect to magnetic north
+
 
 clear all, close all, clc
 
