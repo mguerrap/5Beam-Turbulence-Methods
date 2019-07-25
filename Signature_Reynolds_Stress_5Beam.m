@@ -8,6 +8,17 @@
 % Pitch and roll input signs to RS calculation to match Dewey & Stringer (2007) 
 % Figure 2 and equations 14 to 17.
 % -------------
+
+% -------------
+% Modified on July 2019
+% Added a note on the sign of the along-beam velocities from a Nortek
+% Signature
+% They are positive away from the instrument
+% Sign does not matter for variance calculations
+% Added a note on using heading for rotation: ideally beam pairs should
+% be aligned with the flow main direction to avoid any rotation
+% -------------
+
 clc
 clear
 close all
@@ -89,6 +100,11 @@ end
 % estimate RS [m2/s2] from beam data
 
 for fi=1:Nens
+    
+    % Add a minus sign for convension with Dewey & Stringer paper
+    % Nortek beam velocities are positive away from instrument head
+    % But, the sign does not matter for estimating variances.
+    
     b1=v1(:,:,fi);
     b2=v2(:,:,fi);
     b3=v3(:,:,fi);
@@ -183,6 +199,9 @@ RS.uw_vt=uw_vt;
 RS.vw_vt=vw_vt;
 
 %% Local coordinates Rynolds Stresses
+% Ideally beam pairs should be aligned with the flow main direction to avoid any rotation
+% This must be checked for every channel
+
 alpha=50; % degrees from east to flood clockwise; check this for every channel!
 alpha=alpha*pi/180; %radians
 

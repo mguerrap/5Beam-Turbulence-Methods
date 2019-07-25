@@ -32,12 +32,14 @@ function [u2t v2t w2t uwt vwt uvt alpha q2]=RS_5beam(b1,b2,b3,b4,b5,th,phi1,phi2
 
 % New May 25th 2017
 % For the Nortek Signature 1000
+% Nortek beam velocities are positive away from instrument head
+% Sign does not influence variance calculations.
 % Dewey/Nortek
-% b1=b1
-% b2=b3
-% b3=b4
-% b4=b2
-% b5=b5
+% b1=-b1
+% b2=-b3
+% b3=-b4
+% b4=-b2
+% b5=-b5
 % phi1=Heading
 % phi2=Roll
 % phi3=-Pitch
@@ -126,6 +128,9 @@ vw=-1/(4*(sin(th))^6*(cos(th))^2)*((sin(th))^5*cos(th)*(b4_av-b3_av)...
     +4*(sin(th))^6*(cos(th))^2*phi3*uv_av);
 
 %% Convert to Earth Coordinates using heading
+% Ideally beam pairs should be aligned with main flow direction
+% Here I use heading for rotation, but must be done carefully
+
 u2t=u2*(cos(phi1))^2+2*uv_av*cos(phi1)*sin(phi1)+v2*(sin(phi1))^2;
 v2t=v2*(cos(phi1))^2-2*uv_av*cos(phi1)*sin(phi1)+u2*(sin(phi1))^2;
 w2t=w2;
