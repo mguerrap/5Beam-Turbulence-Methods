@@ -69,8 +69,8 @@ fks2=ks2*dfs2; %-N*dfk:dfk:N*dfk;
 taus1=0:1:Ns1-1;
 taus2=0:1:Ns2-1;
 
-Sini1=[1:Ns1*OL:N-Ns1*OL];
-Sini2=[1:Ns2*OL:N-Ns2*OL];
+Sini1=[1:Ns1*OL:N-2*Ns1*OL];
+Sini2=[1:Ns2*OL:N-2*Ns2*OL];
 
 Sfin1=Sini1+Ns1-1;
 Sfin2=Sini2+Ns2-1;
